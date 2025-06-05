@@ -58,7 +58,6 @@ body {
 
 /* FIRST SECTION */
 .servises {
-  text-align: center;
   padding-top: 68px;
 
 }
@@ -67,7 +66,8 @@ body {
   color: var(--title-color);
   font-family: var(--third-font);
   font-size: 24px;
-  padding-bottom: 20px;
+  padding-bottom: 20px; 
+  text-align: center;
 }
 
 .servises-title {
@@ -75,10 +75,28 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 30px;
-  border-bottom: 4px solid var(--accent-second-color);
-  padding-bottom: 40px;
+  text-align: center;
+  
+}
+.servises-title::after {
+  display: block;
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent-second-color);
+  margin: 40px auto 65px;
+}
+svg {
+  fill: var(--accent-color);
+  width: 37px;
+  height: 37px;
+  flex-shrink: 0;
 }
 
+svg:hover {
+  fill: var(--accent-second-color);
+  transition: 0.6s;
+}
 .servises-list {
   display: flex;
   flex-wrap: wrap;
@@ -86,9 +104,13 @@ body {
   row-gap: 100px;
 
 }
-
+.servises-item {
+  display: flex;
+  gap: 20px;
+  flex-basis: calc((100% - 140px) / 3);
+}
 .servises-head {
-  font-size: 14px;
+  font-size: 14px!important;
   color: var(--title-color);
   font-size: var(--main-font);
   text-transform: uppercase;
@@ -205,5 +227,5 @@ body {
   text-transform: uppercase;
   background-color: var(--accent-color);
   padding: 10px 38px;
-  
+  cursor: pointer;
 }
